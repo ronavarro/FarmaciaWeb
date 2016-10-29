@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FarmaciaWeb", "FarmaciaWeb\FarmaciaWeb.vbproj", "{755118F9-606C-4D2B-A41A-6BE1D0121AA0}"
 EndProject
@@ -27,6 +27,7 @@ Global
 		{359FF1B3-167D-4B43-982D-704B582B76D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{359FF1B3-167D-4B43-982D-704B582B76D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{359FF1B3-167D-4B43-982D-704B582B76D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{359FF1B3-167D-4B43-982D-704B582B76D2}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{1FC47FA7-475D-413B-8F87-E2E45958114B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1FC47FA7-475D-413B-8F87-E2E45958114B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FC47FA7-475D-413B-8F87-E2E45958114B}.Release|Any CPU.ActiveCfg = Release|Any CPU

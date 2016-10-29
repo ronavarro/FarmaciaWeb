@@ -1,13 +1,13 @@
 ﻿Imports System.IO
+Imports System.Configuration
+
 Public Class Conexion
     Public Shared Function getConexionFarmacia() As String
-        Dim DataSource As String = ".\SQL_UAI"
-        Return "Data Source=" & DataSource & ";Initial Catalog=farmacia;Integrated Security=True"
+        Return ConfigurationManager.ConnectionStrings("FarmaciaConnection").ConnectionString
     End Function
 
     Public Shared Function getConexionMaster() As String
-        Dim DataSource As String = ".\SQL_UAI"
-        Return "Data Source=" & DataSource & ";Initial Catalog=master;Integrated Security=True"
+        Return ConfigurationManager.ConnectionStrings("MasterConnection").ConnectionString
     End Function
 
 End Class
