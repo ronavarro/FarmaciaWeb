@@ -145,6 +145,7 @@ Public Class Medicamento
                 MedicamentoBE.descripcion = CStr(fila("descripcion"))
                 LaboratorioBE.razonSocial = CStr(fila("razon_social"))
                 MedicamentoBE.laboratorio = LaboratorioBE
+                MedicamentoBE.NombreLaboratorio = LaboratorioBE.razonSocial
                 MedicamentoBE.eliminado = CBool(fila("eliminado"))
                 MedicamentoBE.precio = CStr(fila("precio"))
                 MedicamentoBE.cantidad = CStr(fila("cantidad"))

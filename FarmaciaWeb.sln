@@ -12,6 +12,9 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DAL", "DAL\DAL.vbproj", "{038D4D72-1DE9-4978-83F4-A566AE1677FE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{1861DD03-D353-4B5D-AFF0-CD9AB0A0D667}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\basefarmacia.sql = Scripts\basefarmacia.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

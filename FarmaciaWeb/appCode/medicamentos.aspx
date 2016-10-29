@@ -23,11 +23,12 @@
                             <div class="dataTable_wrapper">
                             <asp:GridView ID="dgMedicamentos" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered table-hover">
                                 <Columns>
-<%--                                    <asp:TemplateField HeaderText="Id" ItemStyle-Width="150">
+                                    <asp:TemplateField HeaderText="Laboratorio">
                                         <ItemTemplate>
-                                            <asp:Label ID="lblUsuarioId" runat="server" Text='<%# Eval("UsuarioId")%>'></asp:Label>
+                                            <asp:Label ID="lblNombreLaboratorio" runat="server" Text='<%# Eval("NombreLaboratorio")%>'></asp:Label>
                                         </ItemTemplate>
-                                    </asp:TemplateField>--%>
+                                        <ItemStyle Width="150px" />
+                                    </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Medicamento">
                                         <ItemTemplate>
                                             <asp:Label ID="lblNombreMedicamento" runat="server" Text='<%# Eval("descripcion") %>'></asp:Label>
