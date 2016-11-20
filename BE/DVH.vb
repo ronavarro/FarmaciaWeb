@@ -10,6 +10,15 @@ Public Class DVH
     Private _tabla As String
     Private _restricciones As New List(Of Restriccion)
 
+    Public Property Restricciones() As List(Of Restriccion)
+        Get
+            Return _restricciones
+        End Get
+        Set(ByVal value As List(Of Restriccion))
+            _restricciones = value
+        End Set
+    End Property
+
     Public Sub New(ByVal tabla As String)
         _tabla = tabla
     End Sub

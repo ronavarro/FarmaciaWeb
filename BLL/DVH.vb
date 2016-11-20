@@ -68,14 +68,21 @@ Public Class DVH
                         DVHBE.AgregarRestriccion(primary_key.ColumnName, dr.item(primary_key).ToString)
                     Next
                     If (DVH <> DigitoVerificadorHorizontalDAL.GetDigito(DVHBE)) Then
-                        MsgBox("Error Digito Verificador Horizontal, Tabla: " & dt.TableName & " Registro: " & DirectCast(dt.Rows, System.Data.DataRowCollection).Count)
-                        RegistrarBitacora("Error DVH: " & dt.TableName, "Alta", UsuarioBE)
+                        Dim restricciones = DVHBE.Restricciones
+                        Dim concatenar As String = ""
+                        For Each item As BE.DVH.Restriccion In restricciones
+                            concatenar = concatenar + CStr(item.identificador) + ", "
+                        Next
+                        MsgBox("Error Digito Verificador Horizontal, Tabla: " & dt.TableName & " Registro: " & concatenar)
+                        RegistrarBitacora("Error DVH: " & dt.TableName, "Alta", UsuarioBE, False)
                         returnValue = False
+                        Return returnValue
                     End If
                 Next
                 If (DigitoVerificadorVerticalBLL.VerificarDVV(dt) = False) Then
-                    RegistrarBitacora("Error DVV: " & dt.TableName, "Alta", UsuarioBE)
+                    RegistrarBitacora("Error DVV: " & dt.TableName, "Alta", UsuarioBE, False)
                     returnValue = False
+                    Return returnValue
                 End If
             Next
         Catch ex As Exception
@@ -89,13 +96,13 @@ Public Class DVH
     End Function
 
 
-    Public Sub RegistrarBitacora(evento As String, nivel As String, UsuarioBE As BE.Usuario)
+    Public Sub RegistrarBitacora(evento As String, nivel As String, UsuarioBE As BE.Usuario, Optional isGenerarDV As Boolean = True)
         Dim SeguridadBLL As New BLL.Seguridad
         Dim BitacoraBE As New BE.Bitacora
         BitacoraBE.Descripcion = SeguridadBLL.EncriptarRSA(evento)
         BitacoraBE.usuario = UsuarioBE
         BitacoraBE.criticidad = nivel
-        BLL.Bitacora.GetInstance.RegistrarBitacora(BitacoraBE)
+        BLL.Bitacora.GetInstance.RegistrarBitacora(BitacoraBE, isGenerarDV)
     End Sub
 
 End Class
