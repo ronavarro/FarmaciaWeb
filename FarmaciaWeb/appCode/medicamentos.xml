@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Medicamentos>
+  <Medicamento>
+    <MedicamentoID>1</MedicamentoID>
+    <NombreMedicamento>Ibuprofeno</NombreMedicamento>
+    <PrecioUnitario>10</PrecioUnitario>
+  </Medicamento>
+  <Medicamento>
+    <MedicamentoID>2</MedicamentoID>
+    <NombreMedicamento>Ibuprofeno 2</NombreMedicamento>
+    <PrecioUnitario>10</PrecioUnitario>
+  </Medicamento>
+  <Medicamento>
+    <MedicamentoID>3</MedicamentoID>
+    <NombreMedicamento>Ibuprofeno 3</NombreMedicamento>
+    <PrecioUnitario>10</PrecioUnitario>
+  </Medicamento>
+</Medicamentos>
