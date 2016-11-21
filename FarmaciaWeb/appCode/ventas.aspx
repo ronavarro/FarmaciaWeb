@@ -21,14 +21,21 @@
                         <!-- /.panel-heading -->
                     <div class="panel panel-body">
                         <div class="form-group">
-                            <label>medicamento:</label>
+                            <label>Medicamento:</label>
                              <asp:DropDownList ID="cmbMedicamentos" runat="server">
                             </asp:DropDownList>
                             <label>Cantidad:</label>
-                             <asp:TextBox ID="cantidad" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtCantidad" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="rfCantidad" runat="server" ControlToValidate="txtCantidad" Display="Dynamic" Text="Debe ingresar una cantidad" ValidationGroup="vgMedicamentos" ></asp:RequiredFieldValidator>
+                            <asp:RangeValidator ID="rgValidator" ControlToValidate="txtCantidad" runat="server" Type="Double" ValidationGroup="vgMedicamentos" Display="Dynamic" Text="Ingrese una cantidad entre 0 y 100" MaximumValue="100" MinimumValue="0"></asp:RangeValidator>
+
                         </div>
-                    <asp:Button ID="btnCalcular" runat="server" Text="Calcular" class="btn btn-primary"  />
+                    <asp:Button ID="btnCalcular" runat="server" Text="Calcular" class="btn btn-primary" ValidationGroup="vgMedicamentos" />
+                    <asp:Button ID="btnAgregarMedicamento" runat="server" Text="Agregar Medicamento a XML" class="btn btn-primary"  ValidationGroup="vgMedicamentos" /> 
+                    <asp:Button ID="btnLeerMedicamentos" runat="server" Text="Leer Medicamentos" class="btn btn-primary"  /> <br /> <br />
+                    <asp:Label ID="lblPrecioVenta" Font-Bold="true" runat="server" Text=""></asp:Label>
                     </div>
+                        
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->

@@ -1,9 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Web
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FarmaciaWeb", "FarmaciaWeb\FarmaciaWeb.vbproj", "{755118F9-606C-4D2B-A41A-6BE1D0121AA0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C473AAB7-8F50-4970-BDE1-057035B98567} = {C473AAB7-8F50-4970-BDE1-057035B98567}
+	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BE", "BE\BE.vbproj", "{359FF1B3-167D-4B43-982D-704B582B76D2}"
 EndProject
@@ -20,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{3982
 	ProjectSection(SolutionItems) = preProject
 		Library\SevenZipSharp.dll = Library\SevenZipSharp.dll
 	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebServices", "WebServices\WebServices.vbproj", "{C473AAB7-8F50-4970-BDE1-057035B98567}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +49,10 @@ Global
 		{038D4D72-1DE9-4978-83F4-A566AE1677FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{038D4D72-1DE9-4978-83F4-A566AE1677FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{038D4D72-1DE9-4978-83F4-A566AE1677FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C473AAB7-8F50-4970-BDE1-057035B98567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C473AAB7-8F50-4970-BDE1-057035B98567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C473AAB7-8F50-4970-BDE1-057035B98567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C473AAB7-8F50-4970-BDE1-057035B98567}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

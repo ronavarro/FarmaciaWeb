@@ -1,18 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Medicamentos>
   <Medicamento>
-    <MedicamentoID>1</MedicamentoID>
     <NombreMedicamento>Ibuprofeno</NombreMedicamento>
     <PrecioUnitario>10</PrecioUnitario>
+    <Cantidad>1</Cantidad>
   </Medicamento>
   <Medicamento>
-    <MedicamentoID>2</MedicamentoID>
     <NombreMedicamento>Ibuprofeno 2</NombreMedicamento>
     <PrecioUnitario>10</PrecioUnitario>
+    <Cantidad>2</Cantidad>
   </Medicamento>
   <Medicamento>
-    <MedicamentoID>3</MedicamentoID>
     <NombreMedicamento>Ibuprofeno 3</NombreMedicamento>
     <PrecioUnitario>10</PrecioUnitario>
+    <Cantidad>3</Cantidad>
+  </Medicamento>
+  <Medicamento>
+    <NombreMedicamento>medicamento7</NombreMedicamento>
+    <PrecioUnitario>50</PrecioUnitario>
+    <Cantidad>8</Cantidad>
   </Medicamento>
 </Medicamentos>

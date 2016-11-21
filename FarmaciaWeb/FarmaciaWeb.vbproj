@@ -46,6 +46,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web.DynamicData" />
@@ -98,8 +100,10 @@
     <Content Include="appCode\index.aspx" />
     <Content Include="appCode\logout.aspx" />
     <Content Include="appCode\medicamentos.aspx" />
+    <Content Include="appCode\medicamentos.xml" />
     <Content Include="appCode\restore.aspx" />
     <Content Include="appCode\usuarios.aspx" />
+    <Content Include="appCode\ventas.aspx" />
     <Content Include="bower_components\bootstrap-social\bootstrap-social.css" />
     <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.css" />
     <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
@@ -555,6 +559,19 @@
     <Content Include="pages\panels-wells.html" />
     <Content Include="pages\tables.html" />
     <Content Include="pages\typography.html" />
+    <Content Include="Service References\MedicamentosService\FarmaciaWeb.MedicamentosService.CalcularPrecioVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\MedicamentosService\FarmaciaWeb.MedicamentosService.ObtenerPrecioUnitarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\MedicamentosService\MedicamentosService.disco" />
+    <None Include="Service References\MedicamentosService\configuration91.svcinfo" />
+    <None Include="Service References\MedicamentosService\configuration.svcinfo" />
+    <None Include="Service References\MedicamentosService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -616,6 +633,13 @@
       <DependentUpon>usuarios.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="appCode\ventas.aspx.designer.vb">
+      <DependentUpon>ventas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appCode\ventas.aspx.vb">
+      <DependentUpon>ventas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="login.aspx.designer.vb">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
@@ -648,6 +672,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Service References\MedicamentosService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -993,12 +1022,19 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="README.md" />
+    <None Include="Service References\MedicamentosService\MedicamentosService.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MedicamentosService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
